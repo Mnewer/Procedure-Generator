@@ -29,9 +29,6 @@ def main_window():
     root = Tk()
     root.title('Procedure Generator')
     root.geometry("500x600")
-    # logo = PhotoImage(file = "logo.png")
-    # logoimage = Label(image = logo)
-    # logoimage.place(x = 175, y = 150, width = 400, height = 249)
 
     label_file_explorer = Label(root,
                                 text = 'Find template:',
