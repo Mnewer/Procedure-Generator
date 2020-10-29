@@ -11,7 +11,7 @@ def browseFiles():
                 (".txt files", "*.txt*"),
                 ("all files", "*.*")))
     
-    label_file_explorer.configure(text = 'File opened: ' + filename)
+    label_file_explorer.configure(text = str("File opened: " + filename))
 
 
 #root window:
@@ -27,7 +27,7 @@ logoimage.place(x = 175, y = 150, width = 400, height = 249)
 label_file_explorer = Label(root,
                             text = 'Find template:',
                             width = 100,
-                            height = 2,
+                            height = 4,
                             fg = "blue")
 
 btn_explore = Button(root,
