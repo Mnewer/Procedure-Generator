@@ -28,11 +28,11 @@ label_file_explorer = Label(root,
                             height = 2,
                             fg = "blue")
 
-button_explore = Button(root,
+btn_explore = Button(root,
                         text = "Browse templates",
                         command = browseFiles)
 
-button_exit = Button(root,
+btn_exit = Button(root,
                      text = "Exit",
                      command = exit)
 
@@ -40,9 +40,9 @@ button_exit = Button(root,
 #Placing of widgets:
 label_file_explorer.grid(column = 1, row = 1)
 
-button_explore.grid(column = 1, row = 2)
+btn_explore.grid(column = 1, row = 2)
 
-button_exit.grid(column = 1, row = 3)
+btn_exit.grid(column = 1, row = 3)
 
 
 
