@@ -15,7 +15,7 @@ def browseFiles():
 
 #splash screen:
 splash_root = Tk()
-splash_root.geometry("500x600")
+splash_root.geometry("500x600+500+100")
 splash_root_label = Label(splash_root, text = "Procedure Generator", font = "Helvetica",)
 splash_root_label.pack(pady = 90)
 splash_root.overrideredirect(True)
@@ -28,7 +28,7 @@ def main_window():
     splash_root.destroy()
     root = Tk()
     root.title('Procedure Generator')
-    root.geometry("500x600")
+    root.geometry("500x600+500+100")
 
     label_file_explorer = Label(root,
                                 text = 'Find template:',
@@ -48,9 +48,9 @@ def main_window():
 #Placing of widgets:
     label_file_explorer.grid(column = 1, row = 1)
 
-    btn_explore.grid(column = 1, row = 2)
+    btn_explore.grid(column = 0, row = 2)
 
-    btn_exit.grid(column = 1, row = 3)
+    btn_exit.grid(column = 0, row = 3)
 
 
 
