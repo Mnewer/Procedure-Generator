@@ -45,7 +45,7 @@ def main_window():
                         command = exit)
 
 
-#Placing of widgets:
+#Placing of widgets::
     label_file_explorer.grid(column = 1, row = 1)
 
     btn_explore.grid(column = 0, row = 2)
