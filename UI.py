@@ -2,6 +2,7 @@ from tkinter import *
 from tkinter import filedialog
 
 
+
 #File explorer window:
 def browseFiles():
     filename = filedialog.askopenfilenames(initialdir = "/",
@@ -12,6 +13,14 @@ def browseFiles():
                 ("all files", "*.*")))
     
     label_file_explorer.configure(text = str("File opened: " + filename))
+
+#Project or serial number input:
+project_serial_var = ()
+
+def input_serial_project_number():
+    project_serial = numeber.get()
+    print("Serial or project number is: " + project_serial)
+    project_serial_var.set("")    
 
 #splash screen:
 splash_root = Tk()
@@ -31,31 +40,39 @@ def main_window():
     root.geometry("500x600+500+100")
 
     label_file_explorer = Label(root,
-                                text = 'Find template:',
-                                width = 100,
-                                height = 4,
-                                fg = "blue")
+                          text = 'Find template:',
+                          width = 100,
+                          height = 4,
+                          fg = "black")
 
     btn_explore = Button(root,
-                            text = "Browse templates",
-                            command = browseFiles)
+                  text = "Browse templates",
+                  command = browseFiles)
 
     btn_exit = Button(root,
-                        text = "Exit",
-                        command = exit)
+               text = "Exit",
+               command = exit)
+    
+    project_srnr_label = Label(root,
+                         text = 'Input project/serial number:')
+    project_serial_entry = Entry(root,
+                           textvariable = project_serial_var)
+    enter_btn = Button(root,
+                       text = 'Enter',
+                       command = project_serial_entry)
 
 
 #Placing of widgets::
-    label_file_explorer.grid(column = 1, row = 1)
-
-    btn_explore.grid(column = 0, row = 2)
-
-    btn_exit.grid(column = 0, row = 3)
-
-
+    label_file_explorer.pack()
+    
+    btn_explore.pack()
+    btn_exit.pack()
+    project_srnr_label.pack()
+    project_serial_entry.pack()
+    enter_btn.pack()
 
 #Splash screen timer:
-splash_root.after(3000, main_window)
+splash_root.after(1000, main_window)
 
 
 
